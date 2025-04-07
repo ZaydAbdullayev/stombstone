@@ -1,0 +1,176 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100dvh;
+  gap: 100px;
+  overflow-y: auto;
+}
+
+.main-content {
+  padding: 10% 5% 8%;
+
+  > h1 {
+    font-size: 34px;
+  }
+}
+
+.user-info-form {
+  width: 50%;
+  padding: 5%;
+  color: #9a9a9a;
+
+  input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #111;
+    box-shadow: inset 0 0 5px #444;
+    color: #fff;
+    font-size: 14px;
+    font-family: var(--font-family);
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      box-shadow: inset 0 0 5px #999;
+    }
+  }
+}
+
+.stones-container {
+  align-items: flex-end;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stones {
+  margin-bottom: 50px;
+}
+
+.stone {
+  max-width: calc(25% - 20px);
+  height: auto;
+  padding: 10px;
+  cursor: pointer;
+  filter: brightness(0.5);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(1);
+  }
+
+  &.selected {
+    filter: brightness(1);
+    transform: scale(1.05);
+  }
+}
+
+.tombstone {
+  width: 500px;
+  height: 750px;
+  figcaption {
+    width: 230px;
+    height: 330px;
+    margin-top: 45%;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%) !important; */
+    color: #000000;
+    text-shadow: 1px 1px 10px #e2e2e2;
+    text-transform: uppercase;
+    text-align: center;
+    word-break: break-word;
+    font-weight: bold;
+
+    p {
+      font-size: 14px;
+      flex: 1;
+      text-transform: capitalize;
+    }
+
+    span {
+      font-size: 16px;
+      border-bottom: 2px solid #111;
+      padding: 0 5px;
+      margin: 10px 0;
+    }
+  }
+}
+
+.tombstone.white {
+  figcaption {
+    width: 180px;
+    height: 260px;
+    margin-top: 35%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: #42290c;
+    text-shadow: 1px 4px 3px #ccc;
+    line-height: 1.2;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+    span {
+      border-bottom: 1px solid #42290c;
+    }
+  }
+}
+
+.tombstone.brown {
+  figcaption {
+    height: 330px;
+    margin-top: 43%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: #2c2a1e;
+    text-shadow: 1px 4px 5px #696455;
+
+    span {
+      border-bottom: 1px solid #332d25;
+    }
+  }
+}
+
+.tombstone.beje {
+  figcaption {
+    margin-top: 30%;
+    width: 190px;
+    height: 240px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: #081802;
+    text-shadow: 1px 4px 5px #2c3d2e;
+    line-height: 1.2;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    span {
+      border-bottom: 1px solid #332d25;
+      margin: 0;
+    }
+  }
+}
+
+.tombstone-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer {
+  color: #999;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

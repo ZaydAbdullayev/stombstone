@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+// from http://dtott.com/thoughts/2013/07/03/a-sass-mixin-for-long-shadows
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  $j: 50;
+  $opacity:1;
+  @for $i from 1 through $j {
+    $opacity: $opacity - ($i / $j);
+    @if $opacity < 0 {
+      $opacity:0;
+    }
+    /*$val: #{$val}, #{$i}px #{$i}px #{rgba($color, $opacity)};*/
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
+}
+
+@mixin button($color){
+  $fontColor:'';  
+  @if lightness($color) > 50% {
+    $fontColor:darken($color, 40%);  /* Eski darken fonksiyonunu kullanıyoruz */
+  }
+  @else {
+    $fontColor:lighten($color, 40%);  /* Eski lighten fonksiyonunu kullanıyoruz */
+  }
+  outline:none;
+  display:inline-block;
+  padding:5px 10px;
+  border:1px solid #111;
+  border-radius:$radius;
+  background: $color;
+  color:$fontColor;
+  @include longshadow(darken($color, 8%));  /* Eski darken fonksiyonunu kullanıyoruz */
+  overflow:hidden;
+  font-weight:100;
+  text-decoration:none;
+}
+
+$radius:4px;
+$fontSize:20px;
+
+.wrapper{
+  margin:10px;
+}
+.uppercase{
+  text-transform:uppercase;
+}
+.button{
+  margin:5px;
+  $color: #345;
+  @include button($color);
+  cursor:pointer;
+  transition:all .4s linear;
+  &.brown{
+    $color:rgb(66, 20, 20);
+    @include button($color);
+  }
+}
