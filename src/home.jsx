@@ -43,8 +43,7 @@ export const App = () => {
     const imgUrl = await uploadToImgbb(await getCardAsImageData(cardEl));
     console.log(imgUrl);
 
-    const tweetText = `🎖️ Welcome to the trenche force, soldier.
-You’ve officially enlisted in the Trenches Armed Forces — there’s no turning back.`;
+    const tweetText = `Rest in peace, my friend`;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       tweetText
     )}&url=${encodeURIComponent(imgUrl)}`;
@@ -65,8 +64,9 @@ You’ve officially enlisted in the Trenches Armed Forces — there’s no turni
     <div className="df fdc aic wrapper">
       <div className="w100 df fdc aic gap-20 main-content">
         <h1 data-aos="fade-up" data-aos-duration="700">
-          Whispers of the Fallen
+          RIPstone
         </h1>
+        <p>The darkest project on Solana</p>
         {done ? (
           <div
             className="w100 df fdc aic gap-20 result content"

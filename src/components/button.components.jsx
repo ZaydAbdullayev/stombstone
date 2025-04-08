@@ -19,10 +19,10 @@ const ZombieButton = ({ text, click }) => {
       <div className="vcv-button-container" data-state={state}>
         <button
           className="df aic gap-20 vcv-btn"
-          data-hover={`${text} ಠ＿ಠ`}
+          data-hover={`${text} RIP`}
           onClick={handleBtnClick}
         >
-          <span>{text}</span> ｡◕ ‿ ◕｡
+          <span>{text}</span>
         </button>
         <span className="vcv-ghost-btn">ಥ﹏ಥ</span>
       </div>
