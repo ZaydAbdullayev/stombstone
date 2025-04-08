@@ -43,7 +43,11 @@ export const App = () => {
     const imgUrl = await uploadToImgbb(await getCardAsImageData(cardEl));
     console.log(imgUrl);
 
-    const tweetText = `Rest in peace, my friend`;
+    const tweetText = `
+Rest in peace, my friend
+
+$RIP
+`;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       tweetText
     )}&url=${encodeURIComponent(imgUrl)}`;
@@ -236,7 +240,7 @@ export const App = () => {
         )}
       </div>
       <div className="w100 df aic jcc content footer">
-        <p>© 2025 Whispers of the Fallen</p>
+        <p>© 2025 RIPstone - All rights reserved</p>
       </div>
     </div>
   );
