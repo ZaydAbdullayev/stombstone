@@ -11,6 +11,7 @@ import {
 } from "./context/fetch.service";
 import { GiFlowerPot } from "react-icons/gi";
 import { BiLoaderCircle } from "react-icons/bi";
+import x from "./assets/x.png";
 
 export const App = () => {
   const [userInfo, setUserInfo] = useState({
@@ -71,6 +72,15 @@ $RIP
           RIPstone
         </h1>
         <p>The darkest project on Solana</p>
+        <img
+          src={x}
+          alt="x icon"
+          className="x-icon"
+          onClick={() => window.open("https://x.com/ripstone_sol", "_blank")}
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay="100"
+        />
         {done ? (
           <div
             className="w100 df fdc aic gap-20 result content"
