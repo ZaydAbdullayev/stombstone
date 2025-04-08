@@ -235,7 +235,7 @@ $RIP
                 ))}
               </div>
             </div>
-            <ZombieButton text={"Generate"} click={genrate} />
+            <ZombieButton text={"Memorialize"} click={genrate} />
           </div>
         )}
       </div>
