@@ -69,7 +69,7 @@ $RIP
     <div className="df fdc aic wrapper">
       <div className="w100 df fdc aic gap-20 main-content">
         <h1 data-aos="fade-up" data-aos-duration="700">
-          RIPstone
+          GraveNode
         </h1>
         <p>The darkest project on Solana</p>
         <img
@@ -250,7 +250,7 @@ $RIP
         )}
       </div>
       <div className="w100 df aic jcc content footer">
-        <p>© 2025 RIPstone - All rights reserved</p>
+        <p>© 2025 GraveNode - All rights reserved</p>
       </div>
     </div>
   );
