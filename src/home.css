@@ -17,6 +17,7 @@
   width: 100px;
   border-radius: 50%;
   cursor: pointer;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(307deg) brightness(0%) contrast(202%);
 }
 
 .user-info-form {

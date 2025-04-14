@@ -76,7 +76,7 @@ $RIP
           src={x}
           alt="x icon"
           className="x-icon"
-          onClick={() => window.open("https://x.com/ripstone_sol", "_blank")}
+          onClick={() => window.open("https://x.com/GraveNode_sol", "_blank")}
           data-aos="fade-up"
           data-aos-duration="700"
           data-aos-delay="100"
